@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manar Al-Danaf | Portfolio 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-pink: #ff74a4;
+            --light-pink: #ff9aae;
+            --soft-bg: #fff5f7;
+            --dark-pink: #d63384;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--soft-bg);
+            color: #444;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* الهيدر المتدرج مثل الصورة */
+        header {
+            background: linear-gradient(135deg, #ff74a4 0%, #ff9aae 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255, 116, 164, 0.3);
+            position: relative;
+        }
+
+        header h1 { font-size: 2.5rem; margin: 0; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* العناوين مع زهور */
+        .section-title {
+            text-align: center;
+            color: var(--dark-pink);
+            margin: 50px 0 30px;
+            font-size: 1.8rem;
+        }
+        .section-title::before, .section-title::after {
+            content: " 🌸 ";
+        }
+
+        /* الكروت البيضاء بظلال ناعمة */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 154, 174, 0.15);
+            border: 1px solid rgba(255, 154, 174, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(255, 116, 164, 0.25);
+        }
+
+        .card h3 { color: var(--dark-pink); margin-top: 0; }
+
+        .tag {
+            background: var(--main-pink);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* قائمة المهارات بشكل دوائر زهرية */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: white;
+            color: var(--dark-pink);
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 2px solid var(--light-pink);
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* الفوتر بستايل الصورة */
+        footer {
+            background: linear-gradient(135deg, #ff74a4 0%, #ff9aae 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            position: relative;
+        }
+
+        .heart-icon {
+            color: white;
+            font-size: 1.5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>منار الدنف 🌸</h1>
+    <p>Software Engineer | Backend Developer</p>
+    <div style="font-style: italic; margin-top: 10px; opacity: 0.9;">"أبني الحلول البرمجية بلمسة هندسية متقنة"</div>
+</header>
+
+<div class="container">
+    
+    <section>
+        <h2 class="section-title">نبذة عني</h2>
+        <div class="card" style="text-align: center; font-size: 1.1rem;">
+            مهندسة معلوماتية متخصصة في نظم المعلومات. أجمع بين قوة المنطق في الـ Backend والجمال في التنفيذ.
+            متطوعة في منظمة <b>Oxfam</b> وشغوفة بتطوير التكنولوجيا لخدمة المجتمع.
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">مهاراتي التقنية</h2>
+        <ul class="skills-list">
+            <li>Backend Logic</li>
+            <li>Design Patterns</li>
+            <li>Angular</li>
+            <li>Excel Expert</li>
+            <li>System Analysis</li>
+            <li>Software Engineering</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">مشاريعي الإبداعية</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">System Design</span>
+                <h3>Syria Motor</h3>
+                <p>تطبيق متكامل لخدمة سوق السيارات، ركزت فيه على بناء قاعدة بيانات مرنة ومعالجة خلفية سريعة.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Engineering</span>
+                <h3>Banking System</h3>
+                <p>تطبيق أنماط التصميم (Design Patterns) لبناء نظام بنكي آمن واحترافي يحاكي الأنظمة العالمية.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Logic</span>
+                <h3>Angular Compiler</h3>
+                <p>تطوير مترجم ذكي باستخدام تقنيات أنغولار، يبرز قدرتي على التعامل مع الخوارزميات المعقدة.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <div class="heart-icon">❤️</div>
+    <p>صُنع بكل حب ليكون واجهة لنجاح المهندسة منار</p>
+    <p style="font-size: 0.8rem; opacity: 0.8;">© 2024 Manar Al-Danaf Portfolio</p>
+</footer>
+
+</body>
+</html>
