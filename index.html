@@ -20,15 +20,17 @@
             color: #444;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         header {
             background: linear-gradient(135deg, #ff74a4 0%, #ff9aae 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255, 116, 164, 0.3);
         }
 
         .container {
@@ -40,9 +42,10 @@
         .section-title {
             text-align: center;
             color: var(--dark-pink);
-            margin: 40px 0 25px;
+            margin: 50px 0 30px;
             font-size: 1.8rem;
         }
+        .section-title::before, .section-title::after { content: " 🌸 "; }
 
         .grid {
             display: grid;
@@ -56,91 +59,99 @@
             border-radius: 20px;
             box-shadow: 0 8px 20px rgba(255, 154, 174, 0.15);
             border: 1px solid rgba(255, 154, 174, 0.2);
-            text-align: center;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .btn-project {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 20px;
-            background-color: var(--main-pink);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-project:hover {
-            background-color: var(--dark-pink);
-        }
+        .card:hover { transform: translateY(-10px); }
 
         .tag {
-            background: var(--soft-bg);
-            color: var(--dark-pink);
+            background: var(--main-pink);
+            color: white;
             padding: 4px 12px;
             border-radius: 15px;
             font-size: 0.75rem;
-            border: 1px solid var(--light-pink);
-            margin-bottom: 10px;
             display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: white;
+            color: var(--dark-pink);
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 2px solid var(--light-pink);
+            font-weight: bold;
         }
 
         footer {
             background: linear-gradient(135deg, #ff74a4 0%, #ff9aae 100%);
             color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
+        }
+
+        .link-style {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dashed white;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Manar Aldanaf 🌸</h1>
+    <h1>منار الدنف 🌸</h1>
     <p>Software Engineer | Backend Developer</p>
+    <a href="https://manaraldanaf.github.io/Myportfolio/" class="link-style">manaraldanaf.github.io/Myportfolio</a>
 </header>
 
 <div class="container">
-    <h2 class="section-title">مشاريعي البرمجية</h2>
-    <div class="grid">
-        
-        <div class="card">
-            <span class="tag">Backend</span>
-            <h3>Syria Motor</h3>
-            <p>تطبيق مخصص لسوق السيارات السوري، يركز على كفاءة معالجة البيانات وبناء الأنظمة الخلفية.</p>
-            <a href="https://manaraldanaf.github.io/syriamotor/" target="_blank" class="btn-project">View Project</a>
+    <section>
+        <h2 class="section-title">نبذة عني</h2>
+        <div class="card" style="text-align: center;">
+            مهندسة معلوماتية متخصصة في نظم المعلومات والبرمجيات. أعمل على تطوير الأنظمة الخلفية (Backend) بمهارة هندسية، مع خبرة تطوعية ميدانية في منظمة <b>Oxfam</b>.
         </div>
+    </section>
 
-        <div class="card">
-            <span class="tag">Design Patterns</span>
-            <h3>Banking System (SE3)</h3>
-            <p>هندسة نظام بنكي متطور باستخدام أنماط التصميم لضمان أمان واستقرار العمليات المالية.</p>
-            <a href="https://manaraldanaf.github.io/SE3/" target="_blank" class="btn-project">View Project</a>
+    <section>
+        <h2 class="section-title">مشاريعي</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Backend</span>
+                <h3>Syria Motor</h3>
+                <p>تطبيق مخصص لسوق السيارات السوري، يركز على كفاءة معالجة البيانات.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Design Patterns</span>
+                <h3>Banking System</h3>
+                <p>هندسة نظام بنكي باستخدام أنماط التصميم لضمان أمان واستقرار العمليات.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Logic</span>
+                <h3>Angular Compiler</h3>
+                <p>مشروع تقني لبناء مترجم لغة برمجية باستخدام تقنيات Angular.</p>
+            </div>
         </div>
-
-        <div class="card">
-            <span class="tag">Logic & Compilers</span>
-            <h3>Angular Compiler</h3>
-            <p>مشروع تقني عميق لبناء مترجم لغة برمجية (Compiler) باستخدام إطار عمل Angular.</p>
-            <a href="https://manaraldanaf.github.io/compiler1/" target="_blank" class="btn-project">View Project</a>
-        </div>
-
-    </div>
+    </section>
 </div>
 
 <footer>
-    <p>صنع بكل حب للمهندسة منار الدنف ❤️ 2025</p>
+    <p>صُنع بكل حب للمهندسة منار الدنف ❤️</p>
+    <p><a href="https://manaraldanaf.github.io/Myportfolio/" class="link-style">زوروا موقعي الرسمي</a></p>
 </footer>
 
 </body>
 </html>
-
